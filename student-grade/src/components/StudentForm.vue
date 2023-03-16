@@ -1,5 +1,6 @@
 <template>
   <div class="form-container">
+    <h1>Add a new student</h1>
     <form @submit="handleSubmit">
       <input
         @input="handleChange"
@@ -43,7 +44,7 @@ export default {
     },
     async handleSubmit(e) {
       e.preventDefault()
-      await axios.post(`http://localhost:3001/api/register`, {
+      await axios.post(`http://localhost:3001/api/students/register`, {
         firstName: this.firstName,
         lastName: this.lastName,
         email: this.email
