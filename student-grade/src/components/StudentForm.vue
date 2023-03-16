@@ -1,6 +1,6 @@
 <template>
   <div class="form-container">
-    <form v-on:submit="handleSubmit">
+    <form @submit="handleSubmit">
       <input @input="handleChange" placeholder="First Name" :value="firstName" name="firstName" type="firstName" />
       <input @input="handleChange" placeholder="Last Name" :value="lastName" name="lastName" type="lastName" />
       <input @input="handleChange" placeholder="Email" :value="email" name="email" type="email" />
@@ -25,9 +25,11 @@ export default {
     },
     async handleSubmit(e) {
       e.preventDefault()
-      await axios.post(
-        `http://localhost:3001/api/register`, { firstName: this.firstName, lastName: this.lastName, email: this.email, }
-      )
+      await axios.post(`http://localhost:3001/api/register`, {
+        firstName: this.firstName,
+        lastName: this.lastName,
+        email: this.email
+      })
       this.firstName = ''
       this.lastName = ''
       this.email = ''

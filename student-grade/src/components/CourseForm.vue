@@ -17,21 +17,20 @@ export default {
   data: () => ({
     name: null,
     department: null
-
   }),
   methods: {
-    handleChange(event) {
-      console.log(event)
-      this[event.target.name] = event.target.value
+    handleChange(e) {
+      this[e.target.name] = e.target.value
     },
-    async handleSubmit(event) {
-      event.preventDefault()
-      await axios.post('http://localhost:3001/api/courses/create', { name: this.name, department: this.department })
+    async handleSubmit(e) {
+      e.preventDefault()
+      await axios.post(
+        { name: this.name, department: this.department },
+        'http://localhost:3001/api/courses/create'
+      )
       this.name = ''
       this.department = ''
-
     }
   }
 }
-
 </script>
