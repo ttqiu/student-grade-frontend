@@ -3,14 +3,15 @@
     <router-link to="/">Home</router-link>
     <router-link to="/courses">Courses</router-link>
     <router-link to="/students">Students</router-link>
+    <router-link to="/students/add">Add Student</router-link>
+    <router-link to="/courses/add">Add Course</router-link>
   </nav>
 </template>
 
 <script>
-  export default {
-    name: 'NavBar'
-  }
+export default {
+  name: 'NavBar'
+}
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
