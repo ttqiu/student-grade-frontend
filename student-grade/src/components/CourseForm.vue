@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Add A course</h1>
     <form v-on:submit="handleSubmit">
       <input @input="handleChange" placeholder="Course Name" :value="name" name="name" type="name" />
       <input @input="handleChange" placeholder="Department" :value="department" name="department" type="department" />
@@ -21,11 +22,11 @@ export default {
   methods: {
     handleChange(event) {
       console.log(event)
-      this[e.target.name] = e.target.value
+      this[event.target.name] = event.target.value
     },
-    async handleSubmit(e) {
-      e.preventDefault()
-      await axios.post({ name: this.name, department: this.department }, 'http://localhost:3001/api/courses/create')
+    async handleSubmit(event) {
+      event.preventDefault()
+      await axios.post('http://localhost:3001/api/courses/create', { name: this.name, department: this.department })
       this.name = ''
       this.department = ''
 
