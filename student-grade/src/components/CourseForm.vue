@@ -25,8 +25,8 @@ export default {
     async handleSubmit(e) {
       e.preventDefault()
       await axios.post(
-        { name: this.name, department: this.department },
-        'http://localhost:3001/api/courses/create'
+        'http://localhost:3001/api/courses/create',
+        { name: this.name, department: this.department }
       )
       this.name = ''
       this.department = ''

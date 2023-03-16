@@ -1,5 +1,9 @@
 <template>
-  <h1></h1>
+  <div>
+    <main>
+      <router-view header="Listings In Miami"></router-view>
+    </main>
+  </div>
 </template>
 
 <script>
