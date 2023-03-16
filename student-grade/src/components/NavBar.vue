@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="navbar">
     <router-link to="/">Home</router-link>
     <router-link to="/courses">Courses</router-link>
     <router-link to="/students">Students</router-link>
@@ -14,4 +14,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+  .navbar{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+</style>
