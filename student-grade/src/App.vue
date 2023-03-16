@@ -1,17 +1,21 @@
 <template>
-  <div>
+  <div id="app">
+    <header>
+      <NavBar />
+    </header>
     <main>
-      <router-view header="Listings In Miami"></router-view>
+      <router-view header="students"></router-view>
     </main>
   </div>
 </template>
 
 <script>
-
+import NavBar from './components/NavBar.vue'
 
 export default {
   name: 'App',
   components: {
+    NavBar
   }
 }
 </script>
