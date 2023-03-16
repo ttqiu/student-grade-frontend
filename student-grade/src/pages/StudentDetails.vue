@@ -7,13 +7,13 @@
         <h3>{{ studentDetails.email }}</h3>
         <!-- <h3>Overall GPA: {{ studentDetails. }}</h3> -->
       </div>
-      <div className="courses">
-        <CourseCard
-          :key="course.id"
-          v-for="course in studentDetails.courses"
-          :course="course"
-          @click="selectCourse(course.id)"
-        />
+      <div
+        className="courses"
+        :key="course.id"
+        v-for="course in studentDetails.courses"
+      >
+        <CourseCard :course="course" @click="selectCourse(course.id)" />
+        <h3>{{ course.Grade.grade }}</h3>
       </div>
     </section>
   </div>
