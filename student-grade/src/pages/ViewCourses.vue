@@ -1,6 +1,8 @@
 <template>
-  <div :key="course.id" v-for="course in courses">
-    <CourseCard :course="course" @click="selectCourse(course.id)" />
+  <div class="container-grid">
+    <div :key="course.id" v-for="course in courses" class="course">
+      <CourseCard :course="course" @click="selectCourse(course.id)" />
+    </div>
   </div>
 </template>
 
@@ -30,3 +32,5 @@ export default {
   }
 }
 </script>
+
+

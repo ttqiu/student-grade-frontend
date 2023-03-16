@@ -20,10 +20,4 @@ export default {
 }
 </script>
 
-<style>
-#app {
-height: 100vh;
-background-color: rgb(27, 215, 184);
-margin: auto;
-}
-</style>
+

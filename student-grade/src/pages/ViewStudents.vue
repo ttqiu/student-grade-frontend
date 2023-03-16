@@ -1,11 +1,8 @@
 <template>
-  <div className="container-grid">
-    <StudentCard
-      :key="student.id"
-      v-for="student in students"
-      :student="student"
-      @click="selectStudent(student.id)"
-    />
+  <div class="container-grid">
+    <div className="course" :key="student.id" v-for="student in students">
+      <StudentCard :student="student" @click="selectStudent(student.id)" />
+    </div>
   </div>
 </template>
 
