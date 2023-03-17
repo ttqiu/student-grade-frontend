@@ -1,10 +1,11 @@
 <template>
-  <div>
+  <div class="form-container">
     <h1>Add A course</h1>
     <form v-on:submit="handleSubmit">
       <div>
         <h3>Course Name</h3>
         <input
+          class="dropdown"
           @input="handleChange"
           placeholder="Course Name"
           :value="name"
@@ -15,6 +16,7 @@
       <div>
         <h3>Department</h3>
         <input
+          class="dropdown"
           @input="handleChange"
           placeholder="Department"
           :value="department"
