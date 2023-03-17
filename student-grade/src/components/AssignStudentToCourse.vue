@@ -4,24 +4,26 @@
       <h3>{{ studentDetails.firstName }} {{ studentDetails.lastName }}</h3>
     </div>
     <form @submit="handleSubmit">
-      <h3>Please select Course</h3>
-      <select @input="handleCourseChange">
-        <option value="">Select a Course</option>
-        <option v-for="course in courses" :value="course.id" :key="course.id">
-          {{ course.name }}
-        </option>
-      </select>
-      <h3>Please select Grade</h3>
-      <select v-model="grade" @input="handleGradeChange">
-        <option value="" disabled>Select a Grade</option>
-        <option
-          v-for="option in options"
-          :value="option.value"
-          :key="option.id"
-        >
-          {{ option.text }}
-        </option>
-      </select>
+      <div>
+        <select @input="handleCourseChange">
+          <option value="">Select a Course</option>
+          <option v-for="course in courses" :value="course.id" :key="course.id">
+            {{ course.name }}
+          </option>
+        </select>
+      </div>
+      <div>
+        <select v-model="grade" @input="handleGradeChange">
+          <option value="" disabled>Select a Grade</option>
+          <option
+            v-for="option in options"
+            :value="option.value"
+            :key="option.id"
+          >
+            {{ option.text }}
+          </option>
+        </select>
+      </div>
       <button @click="$router.go(-1)">submit</button>
     </form>
   </div>

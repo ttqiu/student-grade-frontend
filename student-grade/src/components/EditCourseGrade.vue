@@ -10,7 +10,6 @@
       </div>
     </div>
     <form @submit="handleSubmit">
-      <h3>Please select Grade</h3>
       <select v-model="grade" @input="handleChange">
         <option value="" disabled>Select a Grade</option>
         <option
@@ -21,7 +20,9 @@
           {{ option.text }}
         </option>
       </select>
-      <button @click="$router.go(-1)">submit</button>
+      <div>
+        <button @click="$router.go(-1)">submit</button>
+      </div>
     </form>
   </div>
 </template>

@@ -5,8 +5,8 @@
       Department: {{ courseDetails.department }}
     </h3>
   </div>
-  <div class="container-grid">
-    <div :key="student.id" v-for="student in students" className="course">
+  <div class="detail-grid">
+    <div :key="student.id" v-for="student in students" class="course">
       <StudentCard :student="student" @click="selectStudent(student.id)" />
       <button @click="editCourseGrade(student.id, courseDetails.id)">
         Edit
