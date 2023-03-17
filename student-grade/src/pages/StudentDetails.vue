@@ -17,6 +17,7 @@
         <button @click="editCourseGrade(studentDetails.id, course.id)">
           Edit
         </button>
+        <button @click="deleteCourseGrade(course.id)">Delete</button>
       </div>
     </div>
   </div>
@@ -58,6 +59,12 @@ export default {
         `http://localhost:3001/api/students/${studentId}/delete`
       )
       this.$router.push(`/students/`)
+    },
+    async deleteCourseGrade(courseId) {
+      await axios.delete(
+        `http://localhost:3001/api/grades/delete/${this.$route.params.student_id}/${courseId}`
+      )
+      this.$router.go(0)
     },
     GPA(grades) {
       let gpa = 0
