@@ -5,11 +5,11 @@
       <h3>{{ studentDetails.email }}</h3>
       <h3>GPA: {{ GPA(courses) }}</h3>
     </div>
-    <button @click="assignCourse(studentDetails.id)">
+    <h3 @click="assignCourse(studentDetails.id)" class="h3-button">
       Assign Student to Course
-    </button>
-    <div class="container-grid">
-      <div :key="course.id" v-for="course in courses">
+    </h3>
+    <div class="detail-grid">
+      <div :key="course.id" v-for="course in courses" class="course">
         <CourseCard :course="course" @click="selectCourse(course.id)" />
         <button @click="editCourseGrade(studentDetails.id, course.id)">
           Edit
