@@ -1,6 +1,6 @@
 # Hedge University
 ## Date: 03/16/2023
-### By: Hyun Bin Yim, Owen Donaven, Ting Ting Qiu
+### By: Hyun Bin Yim, Owen Donovan, Ting Ting Qiu
 #### [HB LinkedIn](https://www.linkedin.com/in/hyunbinyim/) [HB Github](https://github.com/hby77) | [TingTing LinkedIn](https://www.linkedin.com/in/ting-ting-qiu-062587246/) [TingTing Github](https://github.com/ttqiu) | [Trello]()
 ***
 ### ***Description***

@@ -1,5 +1,5 @@
 <template>
-  <div class="homebackground">
+  <div class="background">
 <img class="logoimage" src="../images/hedge.png" alt="hedgehoglogo">
   </div>
 </template>
