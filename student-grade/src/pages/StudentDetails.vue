@@ -4,6 +4,9 @@
       <h1>{{ studentDetails.firstName }} {{ studentDetails.lastName }}</h1>
       <h3>{{ studentDetails.email }}</h3>
       <h3>GPA: {{ GPA(courses) }}</h3>
+      <h3 @click="deleteStudent()" class="h3-button">
+        Delete {{ studentDetails.firstName }} {{ studentDetails.lastName }}
+      </h3>
     </div>
     <h3 @click="assignCourse(studentDetails.id)" class="h3-button">
       Assign Student to Course
@@ -48,6 +51,13 @@ export default {
         a.name.localeCompare(b.name, 'en', { sensitivity: 'base' })
       )
       this.courses = res.data.courses
+    },
+    async deleteStudent() {
+      const studentId = this.$route.params.student_id
+      await axios.delete(
+        `http://localhost:3001/api/students/${studentId}/delete`
+      )
+      this.$router.push(`/students/`)
     },
     GPA(grades) {
       let gpa = 0

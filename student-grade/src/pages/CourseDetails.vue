@@ -4,6 +4,9 @@
     <h3 v-if="courseDetails.department !== null">
       Department: {{ courseDetails.department }}
     </h3>
+    <h3 @click="deleteCourse()" class="h3-button">
+      Delete {{ courseDetails.name }}
+    </h3>
   </div>
   <div class="detail-grid">
     <div :key="student.id" v-for="student in students" class="course">
@@ -41,6 +44,12 @@ export default {
         a.lastName.localeCompare(b.lastName, 'en', { sensitivity: 'base' })
       )
       this.students = res.data.students
+    },
+    async deleteCourse() {
+      await axios.delete(
+        `http://localhost:3001/api/courses/${this.$route.params.course_id}`
+      )
+      this.$router.push(`/courses/`)
     },
     selectStudent(studentId) {
       this.$router.push(`/students/${studentId}`)
