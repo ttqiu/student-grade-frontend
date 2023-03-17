@@ -11,12 +11,17 @@
 
 <script>
 import NavBar from './components/NavBar.vue'
+// import Register from './components/Register'
+// import { CheckSession } from './services/Auth'
 
 export default {
   name: 'App',
   components: {
     NavBar
   }
+  // methods: {
+  //   handleLogout() { },
+  // }
 }
 </script>
 

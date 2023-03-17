@@ -9,6 +9,7 @@ import CourseForm from './components/CourseForm'
 import StudentForm from './components/StudentForm'
 import EditCourseGrade from './components/EditCourseGrade'
 import AssignStudentToCourse from './components/AssignStudentToCourse'
+// import RegisterForm from './components/Register'
 
 const routes = [
   { path: '/', component: HomePage, name: 'HomePage' },
@@ -36,7 +37,13 @@ const routes = [
     path: '/students/assign/:student_id/',
     component: AssignStudentToCourse,
     name: 'AssignStudentToCourse'
-  }
+  },
+  // {
+  //   path: '/register',
+  //   component: RegisterForm,
+  //   name: 'Register'
+  // }
+
 ]
 
 const router = createRouter({
