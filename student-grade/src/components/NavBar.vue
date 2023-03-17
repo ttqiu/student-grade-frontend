@@ -12,7 +12,7 @@
       </router-link>
     </div>
     <div></div>
-    <router-link to="/abouts" class="link">
+    <router-link to="/about" class="link">
       <i class="fa-solid fa-pizza-slice"></i>
     </router-link>
 

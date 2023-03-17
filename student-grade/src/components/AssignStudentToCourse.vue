@@ -5,7 +5,7 @@
     </div>
     <form @submit="handleSubmit">
       <div>
-        <select @input="handleCourseChange">
+        <select  class="dropdown" @input="handleCourseChange">
           <option value="">Select a Course</option>
           <option v-for="course in courses" :value="course.id" :key="course.id">
             {{ course.name }}
@@ -13,7 +13,7 @@
         </select>
       </div>
       <div>
-        <select v-model="grade" @input="handleGradeChange">
+        <select class="dropdown" v-model="grade" @input="handleGradeChange">
           <option value="" disabled>Select a Grade</option>
           <option
             v-for="option in options"

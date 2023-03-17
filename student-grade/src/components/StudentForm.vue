@@ -5,6 +5,7 @@
       <div>
         <h3>First Name</h3>
         <input
+          class="dropdown"
           @input="handleChange"
           placeholder="First Name"
           :value="firstName"
@@ -15,6 +16,7 @@
       <div>
         <h3>Last Name</h3>
         <input
+        class="dropdown"
           @input="handleChange"
           placeholder="Last Name"
           :value="lastName"
@@ -25,6 +27,7 @@
       <div>
         <h3>Email</h3>
         <input
+        class="dropdown"
           @input="handleChange"
           placeholder="Email"
           :value="email"
