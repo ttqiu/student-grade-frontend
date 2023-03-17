@@ -1,6 +1,10 @@
 <template>
   <div class="background">
-    <img class="logoimage" src="../images/hedgecloudsee.png" alt="hedgehoglogo" />
+    <img
+      class="logoimage"
+      src="../images/hedgecloudsee.png"
+      alt="hedgehoglogo"
+    />
     <div class="view">
       <h3 @click="viewStudents()" class="h3-button">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -16,7 +20,6 @@
       <h3 @click="addCourses()" class="h3-button">
         <i class="fa-solid fa-plus"></i>
         <i class="fa-solid fa-book-skull"></i>
-
       </h3>
     </div>
   </div>
@@ -33,7 +36,7 @@ export default {
       this.$router.push(`/courses/`)
     },
     addStudent() {
-      this.$router.push(`/student/add`)
+      this.$router.push(`/students/add`)
     },
     addCourses() {
       this.$router.push(`/courses/add`)
