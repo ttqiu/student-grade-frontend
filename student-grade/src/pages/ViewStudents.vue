@@ -1,8 +1,8 @@
 <template>
   <h1>Students</h1>
-  <h3 @click="addStudent()" class="card">Add A New Student</h3>
+  <h3 @click="addStudent()" class="h3-button">Add A New Student</h3>
   <div class="container-grid">
-    <div className="course" :key="student.id" v-for="student in students">
+    <div :key="student.id" v-for="student in students" class="course">
       <StudentCard :student="student" @click="selectStudent(student.id)" />
     </div>
   </div>

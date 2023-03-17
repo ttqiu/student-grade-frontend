@@ -2,20 +2,26 @@
   <div>
     <h1>Add A course</h1>
     <form v-on:submit="handleSubmit">
-      <input
-        @input="handleChange"
-        placeholder="Course Name"
-        :value="name"
-        name="name"
-        type="name"
-      />
-      <input
-        @input="handleChange"
-        placeholder="Department"
-        :value="department"
-        name="department"
-        type="department"
-      />
+      <div>
+        <h3>Course Name</h3>
+        <input
+          @input="handleChange"
+          placeholder="Course Name"
+          :value="name"
+          name="name"
+          type="name"
+        />
+      </div>
+      <div>
+        <h3>Department</h3>
+        <input
+          @input="handleChange"
+          placeholder="Department"
+          :value="department"
+          name="department"
+          type="department"
+        />
+      </div>
       <button :disabled="!name">Add Courses</button>
     </form>
   </div>

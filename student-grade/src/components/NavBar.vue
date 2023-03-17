@@ -1,9 +1,21 @@
 <template>
   <nav class="navbar">
-      <router-link to="/">Home</router-link>
-      <router-link to="/courses">Courses</router-link>
-      <router-link to="/students">Students</router-link>
-      <router-link to="/about">About</router-link>
+    <div class="mainLinks">
+      <router-link to="/" class="link">
+        <i class="fa-solid fa-house"></i>
+      </router-link>
+      <router-link to="/courses" class="link">
+        <i class="fa-solid fa-book-skull"></i>
+      </router-link>
+      <router-link to="/students" class="link">
+        <i class="fa-solid fa-users"></i>
+      </router-link>
+    </div>
+    <div></div>
+    <router-link to="/abouts" class="link">
+      <i class="fa-solid fa-pizza-slice"></i>
+    </router-link>
+
   </nav>
 </template>
 

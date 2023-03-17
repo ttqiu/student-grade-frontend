@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <h1>Courses</h1>
-    <h3 @click="addCourse()" class="card">Add A New Course</h3>
-    <div class="container-grid">
-      <div :key="course.id" v-for="course in courses" class="course">
-        <CourseCard :course="course" @click="selectCourse(course.id)" />
-      </div>
+  <h1>Courses</h1>
+  <h3 @click="addCourse()" class="h3-button">Add A New Course</h3>
+  <div class="container-grid">
+    <div :key="course.id" v-for="course in courses" class="course">
+      <CourseCard :course="course" @click="selectCourse(course.id)" />
     </div>
   </div>
 </template>
