@@ -96,8 +96,8 @@ select {
 }
 
 .logoimage {
-  height: 700px;
-  width: 700px;
+  height: 1000px;
+  width: 1000px;
 }
 
 .navbar {
@@ -188,5 +188,5 @@ select {
 .view {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: -12% 0% 0% 0%;
+  margin: -27% 0% 0% 0%;
 }
