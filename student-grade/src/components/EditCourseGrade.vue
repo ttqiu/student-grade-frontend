@@ -10,7 +10,7 @@
       </div>
     </div>
     <form @submit="handleSubmit">
-      <select v-model="grade" @input="handleChange">
+      <select class="dropdown" v-model="grade" @input="handleChange">
         <option value="" disabled>Select a Grade</option>
         <option
           v-for="option in options"
