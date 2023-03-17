@@ -5,6 +5,7 @@
 body {
   background-color: rgba(29, 88, 125, 255);
   font-family: 'Roboto', sans-serif;
+  margin: 0;
   text-align: center;
 }
 
@@ -89,8 +90,6 @@ select {
 .homebackground {
   display: flex;
   justify-content: center;
-
-
   margin: auto;
 }
 
@@ -112,7 +111,6 @@ select {
   border-radius: 5px;
   padding-left: 2vw;
   padding-right: 2vw;
-
 }
 
 .mainLinks {
@@ -130,4 +128,39 @@ select {
 .link:hover {
   transform: scale(1.2);
   color: rgba(56, 56, 56, 0.781);
+}
+
+.aboutTitle {
+font-size: 40px;
+}
+
+.imageOne {
+  height: 500px;
+  width: 650px;
+  border: 5px solid black;
+  border-radius: 30px;
+}
+
+.imageTwo {
+  height: 500px;
+  width: 650px;
+  border: 5px solid black;
+  border-radius: 30px;
+}
+
+.imageThree {
+  height: 500px;
+  width: 650px;
+  border: 5px solid black;
+  border-radius: 30px;
+}
+
+.imagesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.aboutParagraph {
+  font-size: 30px;
 }

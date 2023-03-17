@@ -1,7 +1,6 @@
 <template>
   <nav class="navbar">
     <div class="mainLinks">
-
       <router-link to="/" class="link">
         <i class="fa-solid fa-house"></i>
       </router-link>
@@ -13,7 +12,6 @@
       </router-link>
     </div>
     <div></div>
-
     <router-link to="/abouts" class="link">
       <i class="fa-solid fa-pizza-slice"></i>
     </router-link>
