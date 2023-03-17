@@ -1,21 +1,21 @@
 <template>
-  <div class="game-content">
-    <h1>{{ studentDetails.firstName }} {{ studentDetails.lastName }}</h1>
-    <section class="details">
-      <div class="flex-row space"></div>
-      <div className="panel">
-        <h3>{{ studentDetails.email }}</h3>
-        <!-- <h3>Overall GPA: {{ studentDetails. }}</h3> -->
-      </div>
-      <div
-        className="courses"
-        :key="course.id"
-        v-for="course in studentDetails.courses"
-      >
+  <div class="details">
+    <div class="student-info">
+      <h1>{{ studentDetails.firstName }} {{ studentDetails.lastName }}</h1>
+      <h3>{{ studentDetails.email }}</h3>
+      <h3>GPA: {{ GPA(courses) }}</h3>
+    </div>
+    <button @click="assignCourse(studentDetails.id)">
+      Assign Student to Course
+    </button>
+    <div class="container-grid">
+      <div :key="course.id" v-for="course in courses">
         <CourseCard :course="course" @click="selectCourse(course.id)" />
-        <h3>{{ course.Grade.grade }}</h3>
+        <button @click="editCourseGrade(studentDetails.id, course.id)">
+          Edit
+        </button>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
@@ -29,7 +29,10 @@ export default {
     CourseCard
   },
   data: () => ({
-    studentDetails: {}
+    studentDetails: {},
+    courses: [],
+    edit: false,
+    popupActivo: false
   }),
   mounted() {
     this.getStudentDetails()
@@ -41,9 +44,31 @@ export default {
         `http://localhost:3001/api/students/${studentId}`
       )
       this.studentDetails = res.data
+      res.data.courses = res.data.courses.sort((a, b) =>
+        a.name.localeCompare(b.name, 'en', { sensitivity: 'base' })
+      )
+      this.courses = res.data.courses
+    },
+    GPA(grades) {
+      let gpa = 0
+      for (let i = 0; i < grades.length; i++) {
+        gpa += grades[i].Grade.grade
+      }
+      gpa =
+        Math.floor((gpa / grades.length) * Math.pow(10, 2)) / Math.pow(10, 2)
+      if (isNaN(gpa)) {
+        gpa = 0
+      }
+      return gpa
     },
     selectCourse(courseId) {
       this.$router.push(`/courses/${courseId}`)
+    },
+    editCourseGrade(studentId, courseId) {
+      this.$router.push(`/courses/edit/${studentId}/${courseId}`)
+    },
+    assignCourse(studentId) {
+      this.$router.push(`/students/assign/${studentId}/`)
     }
   }
 }
