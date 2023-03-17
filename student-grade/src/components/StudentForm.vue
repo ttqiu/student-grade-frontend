@@ -2,9 +2,27 @@
   <div class="form-container">
     <h1>Add a new student</h1>
     <form @submit="handleSubmit">
-      <input @input="handleChange" placeholder="First Name" :value="firstName" name="firstName" type="firstName" />
-      <input @input="handleChange" placeholder="Last Name" :value="lastName" name="lastName" type="lastName" />
-      <input @input="handleChange" placeholder="Email" :value="email" name="email" type="email" />
+      <input
+        @input="handleChange"
+        placeholder="First Name"
+        :value="firstName"
+        name="firstName"
+        type="firstName"
+      />
+      <input
+        @input="handleChange"
+        placeholder="Last Name"
+        :value="lastName"
+        name="lastName"
+        type="lastName"
+      />
+      <input
+        @input="handleChange"
+        placeholder="Email"
+        :value="email"
+        name="email"
+        type="email"
+      />
       <button :disabled="!email || !firstName || !lastName">Add Student</button>
     </form>
   </div>
@@ -34,6 +52,7 @@ export default {
       this.firstName = ''
       this.lastName = ''
       this.email = ''
+      this.$router.push(`/students/`)
     }
   }
 }

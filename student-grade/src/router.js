@@ -7,6 +7,8 @@ import CourseDetails from './pages/CourseDetails'
 import StudentDetails from './pages/StudentDetails'
 import CourseForm from './components/CourseForm'
 import StudentForm from './components/StudentForm'
+import EditCourseGrade from './components/EditCourseGrade'
+import AssignStudentToCourse from './components/AssignStudentToCourse'
 
 const routes = [
   { path: '/', component: HomePage, name: 'HomePage' },
@@ -24,7 +26,17 @@ const routes = [
     name: 'StudentDetails'
   },
   { path: '/courses/add', component: CourseForm, name: 'CourseForm' },
-  { path: '/students/add', component: StudentForm, name: 'StudentForm' }
+  { path: '/students/add', component: StudentForm, name: 'StudentForm' },
+  {
+    path: '/courses/edit/:student_id/:course_id',
+    component: EditCourseGrade,
+    name: 'EditCourseGrade'
+  },
+  {
+    path: '/students/assign/:student_id/',
+    component: AssignStudentToCourse,
+    name: 'AssignStudentToCourse'
+  }
 ]
 
 const router = createRouter({

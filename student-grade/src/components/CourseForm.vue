@@ -2,8 +2,20 @@
   <div>
     <h1>Add A course</h1>
     <form v-on:submit="handleSubmit">
-      <input @input="handleChange" placeholder="Course Name" :value="name" name="name" type="name" />
-      <input @input="handleChange" placeholder="Department" :value="department" name="department" type="department" />
+      <input
+        @input="handleChange"
+        placeholder="Course Name"
+        :value="name"
+        name="name"
+        type="name"
+      />
+      <input
+        @input="handleChange"
+        placeholder="Department"
+        :value="department"
+        name="department"
+        type="department"
+      />
       <button :disabled="!name">Add Courses</button>
     </form>
   </div>
@@ -24,12 +36,13 @@ export default {
     },
     async handleSubmit(e) {
       e.preventDefault()
-      await axios.post(
-        'http://localhost:3001/api/courses/create',
-        { name: this.name, department: this.department }
-      )
+      await axios.post('http://localhost:3001/api/courses/create', {
+        name: this.name,
+        department: this.department
+      })
       this.name = ''
       this.department = ''
+      this.$router.push(`/courses/`)
     }
   }
 }
