@@ -184,4 +184,8 @@ font-size: 40px;
   border-radius: 30px;
   border: 3px solid black;
 
+.view{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: -12% 0% 0% 0%;
 }
