@@ -1,6 +1,6 @@
 <template>
   <div class="background">
-    <img class="logoimage" src="../images/hedge.png" alt="hedgehoglogo" />
+    <img class="logoimage" src="../images/hedgecloudsee.png" alt="hedgehoglogo" />
     <div class="view">
       <h3 @click="viewStudents()" class="h3-button">View Students</h3>
       <h3 @click="viewCourses()" class="h3-button">View Courses</h3>
